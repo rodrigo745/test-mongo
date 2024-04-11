@@ -2,6 +2,8 @@ import testeo from "@/models/testeo";
 import ConnectDB from "@/libs/mongoose";
 import {NextResponse} from "next/server";
 
+export const dynamic = "force-dinamyc";
+
 export async function GET(){
     await ConnectDB();
     const res = await testeo.find();

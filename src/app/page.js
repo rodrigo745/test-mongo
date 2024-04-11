@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { GET } from "./api/nuevo/route";
 
+export const dynamic = "force-dinamyc";
+
 export default async function Home() {
   
   const data = await GET();

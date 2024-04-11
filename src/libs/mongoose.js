@@ -1,9 +1,7 @@
 import mongoose from "mongoose";
 
-export default async function ConnectDB(){
-    const res = await fetch(process.env.ENLACE, {
-        next: {revalidate: 0 }
-    });
+export const dynamic = "force-dinamyc";
 
-    await mongoose.connect(res);
+export default async function ConnectDB(){
+    await mongoose.connect(process.env.ENLACE);
 }
